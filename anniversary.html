@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Anniversary ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(148,44,104,.45), transparent 40%),
+        linear-gradient(135deg,#160b2b,#4b123d);
+    color:white;
+    overflow-x:hidden;
+}
+
+
+/* =========================
+   FLOATING BALLOONS
+========================= */
+
+.balloon{
+    position:fixed;
+    width:55px;
+    height:70px;
+    border-radius:50%;
+    z-index:1;
+    opacity:.75;
+    animation:balloonFloat 6s ease-in-out infinite;
+}
+
+.balloon::after{
+    content:"";
+    position:absolute;
+    width:1px;
+    height:90px;
+    background:#777;
+    left:50%;
+    top:68px;
+}
+
+.b1{
+    background:#ff6b9a;
+    left:4%;
+    bottom:10%;
+}
+
+.b2{
+    background:#9b7cff;
+    right:5%;
+    top:15%;
+    animation-delay:1s;
+}
+
+.b3{
+    background:#ffb86c;
+    left:12%;
+    top:25%;
+    animation-delay:2s;
+}
+
+.b4{
+    background:#74c0fc;
+    right:12%;
+    bottom:12%;
+    animation-delay:3s;
+}
+
+@keyframes balloonFloat{
+
+    0%,100%{
+        transform:translateY(0) rotate(-4deg);
+    }
+
+    50%{
+        transform:translateY(-30px) rotate(4deg);
+    }
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+    position:fixed;
+    width:8px;
+    height:14px;
+    top:-20px;
+    z-index:2;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+    z-index:3;
+}
+
+.hero-card{
+    max-width:900px;
+    padding:55px 35px;
+    border-radius:35px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 30px 80px rgba(100,50,100,.18);
+
+    border:1px solid rgba(255,255,255,.8);
+}
+
+.small-title{
+    font-size:18px;
+    color:#9b5de5;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:65px;
+    color:#d6336c;
+    margin-bottom:20px;
+}
+
+.hero-caption{
+    font-size:22px;
+    line-height:1.8;
+    color:#5d4050;
+}
+
+.date-text{
+    margin-top:25px;
+    font-size:18px;
+    color:#8c4a6b;
+}
+
+.scroll-btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:14px 25px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#d6336c,#9b5de5);
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.scroll-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(150,60,130,.25);
+}
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.section{
+    width:92%;
+    max-width:1100px;
+    margin:auto;
+    padding:90px 0;
+    position:relative;
+    z-index:3;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    color:#d6336c;
+    margin-bottom:45px;
+}
+
+
+/* =========================
+   PHOTO GALLERY
+========================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-auto-rows:220px;
+    gap:18px;
+}
+
+
+/* PHOTO BOX */
+
+.photo{
+    border-radius:25px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ffd6e7,#ddd0ff);
+    box-shadow:0 15px 35px rgba(80,40,80,.15);
+    position:relative;
+
+    /* PHOTO CLICK */
+    cursor:pointer;
+}
+
+
+/* ALL PHOTOS */
+
+.photo img{
+    width:100%;
+    height:100%;
+    display:block;
+
+    object-fit:cover;
+
+    transition:transform .4s ease;
+}
+
+
+/* PHOTO HOVER */
+
+.photo:hover img{
+    transform:scale(1.04);
+}
+
+
+/* =========================
+   PHOTO ADJUSTMENT
+========================= */
+
+.photo1 img{
+    object-position:center center;
+}
+
+.photo2 img{
+    object-position:center center;
+}
+
+.photo3 img{
+    object-position:top center;
+}
+
+.photo4 img{
+    object-position:center center;
+}
+
+.photo5 img{
+    object-position:center center;
+}
+
+.photo6 img{
+    object-position:center;
+}
+
+
+/* =========================
+   PHOTO GRID
+========================= */
+
+.photo2{
+    grid-column:span 4;
+    grid-row:span 2;
+}
+
+.photo1{
+    grid-column:span 8;
+}
+
+.photo6{
+    grid-column:span 8;
+}
+
+.photo4{
+    grid-column:span 4;
+    grid-row:span 2;
+}
+
+.photo5{
+    grid-column:span 4;
+    grid-row:span 2;
+}
+
+.photo3{
+    grid-column:span 4;
+    grid-row:span 2;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story-card{
+    max-width:850px;
+    margin:auto;
+    padding:45px 35px;
+    border-radius:30px;
+
+    background:rgba(255,255,255,.75);
+
+    box-shadow:
+    0 20px 60px rgba(80,40,80,.14);
+
+    text-align:center;
+}
+
+.story-card h3{
+    font-size:30px;
+    color:#9b5de5;
+    margin-bottom:22px;
+}
+
+.story-card p{
+    font-size:18px;
+    line-height:2;
+    color:#5c4652;
+}
+
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+.final{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.final h2{
+    font-size:42px;
+    color:#d6336c;
+    margin-bottom:20px;
+}
+
+.final p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+.top-btn{
+    display:inline-block;
+    margin-top:30px;
+    text-decoration:none;
+    color:#9b5de5;
+    font-weight:bold;
+}
+
+
+/* =================================================
+   FULL SCREEN PHOTO VIEWER
+================================================= */
+
+.image-viewer{
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(10,5,20,.94);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:30px;
+
+    opacity:0;
+    visibility:hidden;
+
+    z-index:9999;
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+}
+
+
+/* OPEN */
+
+.image-viewer.active{
+    opacity:1;
+    visibility:visible;
+}
+
+
+/* FULL IMAGE */
+
+.image-viewer img{
+    max-width:92%;
+    max-height:88vh;
+
+    width:auto;
+    height:auto;
+
+    object-fit:contain;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.65);
+
+    transform:scale(.55);
+
+    opacity:0;
+
+    transition:
+        transform .5s cubic-bezier(.17,.67,.3,1.25),
+        opacity .35s ease;
+}
+
+
+/* IMAGE OPEN ANIMATION */
+
+.image-viewer.active img{
+    transform:scale(1);
+    opacity:1;
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.viewer-close{
+    position:absolute;
+
+    top:25px;
+    right:30px;
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.4);
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    font-size:32px;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:.3s;
+
+    z-index:10000;
+}
+
+.viewer-close:hover{
+    background:rgba(255,255,255,.3);
+
+    transform:
+        rotate(90deg)
+        scale(1.08);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero-caption{
+        font-size:17px;
+    }
+
+    .hero-card{
+        padding:40px 20px;
+    }
+
+    .section{
+        padding:65px 0;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+        grid-auto-rows:190px;
+    }
+
+    .photo1,
+    .photo2,
+    .photo3,
+    .photo4,
+    .photo5,
+    .photo6{
+        grid-column:span 1;
+        grid-row:span 1;
+    }
+
+    .photo1{
+        grid-column:span 2;
+    }
+
+    .story-card{
+        padding:30px 20px;
+    }
+
+    .story-card p{
+        font-size:16px;
+    }
+
+    .final h2{
+        font-size:32px;
+    }
+
+
+    /* FULL IMAGE MOBILE */
+
+    .image-viewer{
+        padding:15px;
+    }
+
+    .image-viewer img{
+        max-width:96%;
+        max-height:82vh;
+        border-radius:14px;
+    }
+
+    .viewer-close{
+        top:15px;
+        right:15px;
+
+        width:44px;
+        height:44px;
+
+        font-size:27px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     BALLOONS
+========================= -->
+
+<div class="balloon b1"></div>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
+<div class="balloon b4"></div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="top">
+
+    <div class="hero-card">
+
+        <div class="small-title">
+            ✨ A Beautiful Journey ✨
+        </div>
+
+        <h1>
+            Happy Anniversary Majhi Manjar 🥰❤️✨
+        </h1>
+
+        <div class="hero-caption">
+
+            🥂 One more year of memories, smiles & beautiful moments 💕
+
+            <br>
+
+            🌹 And many more wonderful memories waiting ahead ✨
+
+        </div>
+
+        <div class="date-text">
+            💫 11 June 2023 • Our Special Day 💫
+        </div>
+
+        <a href="#memories" class="scroll-btn">
+            ↓ Scroll to our memories ↓
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MEMORIES
+========================= -->
+
+<section class="section" id="memories">
+
+    <h2 class="section-title">
+        📸 Our Beautiful Memories 💕
+    </h2>
+
+
+    <div class="gallery">
+
+
+        <!-- PHOTO 1 -->
+
+        <div class="photo photo1">
+
+            <img
+                src="photos/photo1.jpeg"
+                alt="Our Memory 1"
+            >
+
+        </div>
+
+
+        <!-- PHOTO 2 -->
+
+        <div class="photo photo2">
+
+            <img
+                src="photos/photo2.jpeg"
+                alt="Our Memory 2"
+            >
+
+        </div>
+
+
+        <!-- PHOTO 3 -->
+
+        <div class="photo photo3">
+
+            <img
+                src="photos/photo3.jpeg"
+                alt="Our Memory 3"
+            >
+
+        </div>
+
+
+        <!-- PHOTO 4 -->
+
+        <div class="photo photo4">
+
+            <img
+                src="photos/photo4.jpeg"
+                alt="Our Memory 4"
+            >
+
+        </div>
+
+
+        <!-- PHOTO 5 -->
+
+        <div class="photo photo5">
+
+            <img
+                src="photos/photo5.jpeg"
+                alt="Our Memory 5"
+            >
+
+        </div>
+
+
+        <!-- PHOTO 6 -->
+
+        <div class="photo photo6">
+
+            <img
+                src="photos/photo6.jpeg"
+                alt="Our Memory 6"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     STORY
+========================= -->
+
+<section class="section">
+
+    <div class="story-card">
+
+        <h3>
+            Our Little Story ✨
+        </h3>
+
+        <p>
+
+            Some moments become memories,
+            some memories become stories,
+            and some stories become a beautiful journey. ❤️
+
+            <br><br>
+
+            Since 11 June 2023,
+            every little moment has become a part
+            of this beautiful journey. 🌸
+
+            <br><br>
+
+            Here's to all the smiles, memories,
+            celebrations and wonderful moments ahead. 🥂✨
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="final">
+
+    <h2>
+        💖 Happy Anniversary 💖
+    </h2>
+
+    <p>
+        ✨ Here's to more beautiful memories,
+        more smiles and more special moments. ✨
+    </p>
+
+    <a href="#top" class="top-btn">
+        ↑ Back to Top
+    </a>
+
+</section>
+
+
+
+<!-- =========================
+     SCRIPT
+========================= -->
+
+<script>
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+for(let i = 0; i < 70; i++){
+
+    const confetti = document.createElement("div");
+
+    confetti.className = "confetti";
+
+    confetti.style.left =
+        Math.random() * 100 + "vw";
+
+    confetti.style.animationDuration =
+        (3 + Math.random() * 5) + "s";
+
+    confetti.style.animationDelay =
+        Math.random() * 5 + "s";
+
+    confetti.style.background =
+        [
+            "#ff6b9a",
+            "#9b7cff",
+            "#ffb86c",
+            "#74c0fc",
+            "#ffd43b"
+        ][Math.floor(Math.random() * 5)];
+
+    confetti.style.transform =
+        "rotate(" + Math.random() * 360 + "deg)";
+
+    document.body.appendChild(confetti);
+
+}
+
+
+
+/* =================================================
+   FULL SCREEN PHOTO VIEWER
+================================================= */
+
+
+/* GET ALL PHOTOS */
+
+const photos = document.querySelectorAll(".photo img");
+
+
+/* CREATE VIEWER */
+
+const viewer = document.createElement("div");
+
+viewer.className = "image-viewer";
+
+
+/* VIEWER HTML */
+
+viewer.innerHTML = `
+
+    <button
+        class="viewer-close"
+        aria-label="Close"
+    >
+        ×
+    </button>
+
+    <img
+        src=""
+        alt="Full Image"
+    >
+
+`;
+
+
+/* ADD VIEWER TO PAGE */
+
+document.body.appendChild(viewer);
+
+
+/* GET VIEWER ELEMENTS */
+
+const viewerImage =
+    viewer.querySelector("img");
+
+const closeButton =
+    viewer.querySelector(".viewer-close");
+
+
+
+/* =========================
+   OPEN PHOTO
+========================= */
+
+photos.forEach(photo => {
+
+    photo.addEventListener("click", function(){
+
+        /* Set clicked photo */
+
+        viewerImage.src = this.src;
+
+        viewerImage.alt = this.alt;
+
+
+        /* Open viewer */
+
+        viewer.classList.add("active");
+
+
+        /* Stop background scrolling */
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+closeButton.addEventListener(
+    "click",
+    closeViewer
+);
+
+
+
+/* =========================
+   CLICK OUTSIDE IMAGE
+========================= */
+
+viewer.addEventListener("click", function(e){
+
+    if(e.target === viewer){
+
+        closeViewer();
+
+    }
+
+});
+
+
+
+/* =========================
+   ESC KEY
+========================= */
+
+document.addEventListener("keydown", function(e){
+
+    if(e.key === "Escape"){
+
+        closeViewer();
+
+    }
+
+});
+
+
+
+/* =========================
+   CLOSE FUNCTION
+========================= */
+
+function closeViewer(){
+
+    viewer.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+</script>
+
+
+</body>
+</html>
